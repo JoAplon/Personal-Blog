@@ -61,6 +61,14 @@ my-blog
 └── README.md
 ```
 
+## Description
+
+This is an application that allows you to submit blog posts with a name, title, and content section. There are two pages in this blog. The first shows the home page and a form that lets you create a post. There is a toggle button in the upper right corner that lets you choose either a dark or light theme. This theme will be remembered between pages. On the second page you will see your blog post with the title, content, and author at the bottom. This page will have the toggle button as well as a back button so you can go back to the first page. This application will have a header and footer. The footer will contain a link to the developers portfolio.
+
+## Usage
+
+This application can be used as a demonstration of the developers' skills with javascript and provide a source to the developers' other work. This can also be used in camparison to older works that show the developers' progress in web developement.
+
 ## Mock-Up
 
 The following animation demonstrates the application functionality:
