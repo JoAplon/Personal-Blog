@@ -14,6 +14,59 @@ header{
     border-bottom-style: double;
     border-width: 10px;
 }
+/* TODO: How do I center the button and give it padding on the right? */
+.dark-on{
+    width: 40px;
+    height: 20px;
+    background-color: gray;
+    border-radius: 20px;
+    cursor: pointer;
+    display: flex;
+    align-content: center;
+    
+}
+
+.dark-on:after{
+    content: "☀️";
+    width: 19px;
+    height: 19px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#darkmode-toggle{
+    visibility: hidden;
+}
+
+#darkmode-toggle:checked + label{
+    background-color: orange;
+}
+
+#darkmode-toggle:checked + label:after{
+    transform: translateX(100%);
+    background: linear-gradient(180deg, gray, rgb(0, 0, 0));
+}
+
+#darkmode-toggle:active:after{
+    width: 20px;
+}
+/* TODO: How do i make the background transition into dark mode */
+.background{
+    width: 100vh;
+    height: 100vh;
+    background: white;
+    z-index: -1;
+    position: absolute;
+    transition: 0.3s;
+}
+
+#darkmode-toggle:checked + label + background{
+    background: #242424;
+}
 
 .left-box{
     float: left;
