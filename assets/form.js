@@ -1,42 +1,21 @@
-const userName = document.querySelector('.userN');
-const title = document.querySelector('.userT');
-const contentText = document.querySelector('.userC');
-const submit = document.querySelector('.submit');
+const formInput = document.querySelector('.form-input');
+const userName = document.querySelector('.username-text');
+const titleText = document.querySelector('.title-text');
+const contentText = document.querySelector('.content-text');
 
-
-function displayMessage(type, message) {
-    msgDiv.textContent = message;
-    msgDiv.setAttribute('class', type);
-  }
-  
-  function lastEntered() {
-    const userName = localStorage.getItem('userN');
-    const title = localStorage.getItem('userT');
-    const contentText = localStorage.getItem('userC');
-  
-    if (!email || !password) {
-      return;
-    }
-  
-    userEmailSpan.textContent = email;
-    userPasswordSpan.textContent = password;
-  }
-
-  signUpButton.addEventListener('click', function (event) {
+function loggUserBlog(event) {
     event.preventDefault();
-  
-    const email = emailInput.value;
-    const password = passwordInput.value;
-  
-    if (email === '') {
-      displayMessage('error', 'Email cannot be blank');
-    } else if (password === '') {
-      displayMessage('error', 'Password cannot be blank');
+    if (userName.value.trim() === '' || titleText.value.trim() === '' || contentText.value.trim() === '') {
+        alert('Error! Please fill out all fields.');
     } else {
-      displayMessage('success', 'Registered successfully');
-  
-      localStorage.setItem('email', email);
-      localStorage.setItem('password', password);
-      renderLastRegistered();
-    }
-  });  
+        const userData = {
+            userName: userName.value,
+            title: titleText.value,
+            content: contentText.value.trim(),
+        };
+        localStorage.setItem('userData', JSON.stringify(userData));
+        
+    };
+}
+formInput.addEventListener('submit', loggUserBlog);
+console.log(formInput);
