@@ -5,68 +5,41 @@
     font-family: sans-serif;
 }
 
+/* Light Theme */
+:root{
+    --background: #f5f5f5;
+    --text: #333;
+}
+
 header{
     width: 100%;
     min-height: 10vh;
-    background-color: white;
+    background-color: var(--background);
     display: flex;
     justify-content: right;
     border-bottom-style: double;
     border-width: 10px;
 }
-/* TODO: How do I center the button and give it padding on the right? */
-.dark-on{
-    width: 40px;
-    height: 20px;
-    background-color: gray;
-    border-radius: 20px;
+
+body{
+    background-color: var(--background);
+    color: var(--text);
+}
+/* Dark Theme */
+.darktheme{
+    --background: #333;
+    --text: #f5f5f5;
+}
+
+button{
     cursor: pointer;
-    display: flex;
-    align-content: center;
-    
+    width: 25px;
+    height: 25px;
+    margin: 15px;
+    border-radius: 15px;
+    background-color: rgb(135, 127, 127);
 }
 
-.dark-on:after{
-    content: "☀️";
-    width: 19px;
-    height: 19px;
-    background-color: white;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-
-#darkmode-toggle{
-    visibility: hidden;
-}
-
-#darkmode-toggle:checked + label{
-    background-color: orange;
-}
-
-#darkmode-toggle:checked + label:after{
-    transform: translateX(100%);
-    background: linear-gradient(180deg, gray, rgb(0, 0, 0));
-}
-
-#darkmode-toggle:active:after{
-    width: 20px;
-}
-/* TODO: How do i make the background transition into dark mode */
-.background{
-    width: 100vh;
-    height: 100vh;
-    background: white;
-    z-index: -1;
-    position: absolute;
-    transition: 0.3s;
-}
-
-#darkmode-toggle:checked + label + background{
-    background: #242424;
-}
 
 .left-box{
     float: left;
@@ -78,7 +51,7 @@ header{
 }
 
 .profile-pic{
-    background-color: orange;
+    background: linear-gradient(orange, grey);
     width: 500px;
     height: 500px;
     border-radius: 50%;
@@ -97,44 +70,4 @@ header{
     display: flex;
     justify-content: end;
     align-items: end;
-}
-
-.input{
-    height: 70%;
-    width: 100%;
-    padding: 20px;
-}
-
-form{
-    padding: 10px;
-}
-
-.title-text{
-    width: 100%;
-    padding: 5px;
-    margin-bottom: 15px;
-    border-radius: 5px;
-}
-
-
-.username-text{
-    width: 100%;
-    padding: 5px;
-    margin-bottom: 15px;
-    border-radius: 5px;
-}
-
-.content-text{
-    width: 100%;
-    height: 70px;
-    border-radius: 5px;
-    margin-bottom: 15px;
-}
-
-input[type=submit]{
-    width: 100%;
-    background-color: black;
-    color: white;
-    padding: 5px;
-    border-radius: 5px;
 }
