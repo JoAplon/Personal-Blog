@@ -4,14 +4,36 @@
     font-family: sans-serif;
 }
 
+
+/* Light Theme */
+.lighttheme{
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Dark Theme */
+.darktheme{
+    background-color: #333;
+    color: #f5f5f5;
+}
 header{
     width: 100%;
     min-height: 10vh;
-    background-color: white;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     border-bottom-style: double;
     border-width: 10px;
-    justify-content: space-between;
+}
+
+button{
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    margin: 15px;
+    border-radius: 15px;
+    background-color: rgb(135, 127, 127);
+    margin-right: 10px;
 }
 
 footer{
@@ -28,29 +50,29 @@ main{
 }
 
 h1{
-   float: left;
    margin: 10px;
 }
 
 .back-page{
-    width: 60px;
+    width: 70px;
     height: 40px;
     background-color: black;
     color: white;
     cursor: pointer;
     margin: 10px;
+    border-radius: 7px;
+    float: right;
 }
 
 .back-page:after{
     content: '←Back';
     display: flex;
-    justify-content: center;
-    align-items: center;
     margin: 10px;
 }
 
 #back-click{
     visibility: hidden;
+    align-items: flex-end;
 }
 
 div nav{
@@ -65,6 +87,7 @@ a{
     margin: 10px;
     font-style: italic;
     font-weight: bold;
+    color: rgb(214, 184, 75);
 }
 
 h4{

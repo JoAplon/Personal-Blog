@@ -17,5 +17,19 @@ function loggUserBlog(event) {
         
     };
 }
+
+if(formInput){
 formInput.addEventListener('submit', loggUserBlog);
 console.log(formInput);
+}
+
+function renderDataRetrieve() {
+    const dataRetrieve = JSON.parse(localStorage.getItem('userData'));
+    if (userData !== null) {
+       document.querySelector('username-text').innerhtml = dataRetrieve.userName;
+       document.querySelector('title-text').innerhtml = dataRetrieve.titletext;
+       document.querySelector('content-text').innerhtml = dataRetrieve.contenttext;
+    }
+    renderDataRetrieve();
+    console.log(dataRetrieve);
+}
