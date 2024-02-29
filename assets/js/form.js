@@ -14,22 +14,23 @@ function loggUserBlog(event) {
             content: contentText.value.trim(),
         };
         localStorage.setItem('userData', JSON.stringify(userData));
-        
-    };
-}
+        window.location.href = 'http://127.0.0.1:5500/blog.html#';
 
-if(formInput){
-formInput.addEventListener('submit', loggUserBlog);
-console.log(formInput);
-}
-
-function renderDataRetrieve() {
-    const dataRetrieve = JSON.parse(localStorage.getItem('userData'));
-    if (userData !== null) {
-       document.querySelector('username-text').innerhtml = dataRetrieve.userName;
-       document.querySelector('title-text').innerhtml = dataRetrieve.titletext;
-       document.querySelector('content-text').innerhtml = dataRetrieve.contenttext;
     }
-    renderDataRetrieve();
-    console.log(dataRetrieve);
+};
+
+if (formInput) {
+    formInput.addEventListener('submit', loggUserBlog);
+    console.log(formInput);
 }
+
+// function renderDataRetrieve() {
+//     const dataRetrieve = JSON.parse(localStorage.getItem('userData'));
+//     if (dataRetrieve !== null) {
+//         document.querySelector('.username-text').innerHTML = dataRetrieve.userName;
+//         document.querySelector('.title-text').innerHTML = dataRetrieve.titletext;
+//         document.querySelector('.content-text').innerHTML = dataRetrieve.contenttext;
+//     }
+// }
+// renderDataRetrieve();
+// console.log(dataRetrieve);

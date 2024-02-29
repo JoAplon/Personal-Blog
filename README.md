@@ -30,7 +30,7 @@ THEN I am presented with a header, with a light mode/dark mode toggle, and a "Ba
 WHEN I click the light mode/dark mode toggle,
 THEN the page content's styles update to reflect the selection.❤️
 WHEN I click the "Back" button,
-THEN I am redirected back to the landing page where I can input more blog entries.☀️
+THEN I am redirected back to the landing page where I can input more blog entries.❤️
 WHEN I view the main content,
 THEN I am presented with a list of blog posts that are pulled from localStorage.☀️
 WHEN I view localStorage,

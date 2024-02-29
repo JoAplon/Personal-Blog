@@ -18,7 +18,11 @@
         </button>
     </header>
     <main>
-        <div class="data-container"></div>
+        <div class="data-container">
+            <div id="display-username"></div>
+            <div id="display-title"></div>
+            <div id="display-content"></div>
+        </div>
 
     </main>
     <footer>
@@ -37,6 +41,11 @@
     <Script src="assets/js/form.js"></Script>
     <script src="assets/js/blog.js"></script>
     <script>
+        document.getElementById('back-click').addEventListener('click', function() {
+            window.location.href='http://127.0.0.1:5500/index.html';
+        });
+    </script>
+    <script>
         function retrieveConsoleData() {
             let userName = localStorage.getItem('userName');
             let title = localStorage.getItem('title');
@@ -50,11 +59,7 @@
             `;
         }
         window.onload = retrieveConsoleData;
-    </script>
-    <script>
-        document.getElementById('back-click').addEventListener('click', function() {
-            window.location.href='http://127.0.0.1:5500/index.html';
-        });
+        console.log(retrieveConsoleData);
     </script>
 </body>
 
