@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/blog.css">
+    <link rel="stylesheet" href="assets/css/blog.css">
     <title>My First Blog</title>
 </head>
+
 <body>
     <header>
         <h1>My First Blog</h1>
@@ -16,19 +18,44 @@
         </button>
     </header>
     <main>
+        <div class="data-container"></div>
 
     </main>
     <footer>
         <div>
-        <nav>
-            <a href="#">Portfolio: View my other work!</a>
-            <a href="#">Blog: Learn more about me!</a>
-            <a href="#">Email: This is how to contact me!</a>
-        </nav>
-    </div>
-    <div><h4>Made With ❤️ By Jordan</h4></div>
+            <nav>
+                <a href="#">Portfolio: View my other work!</a>
+                <a href="#">Blog: Learn more about me!</a>
+                <a href="#">Email: This is how to contact me!</a>
+            </nav>
+        </div>
+        <div>
+            <h4>Made With ❤️ By Jordan</h4>
+        </div>
     </footer>
-    <script src="assets/logic.js"></script>
-    <Script src="assets/form.js"></Script>
+    <script src="assets/js/logic.js"></script>
+    <Script src="assets/js/form.js"></Script>
+    <script src="assets/js/blog.js"></script>
+    <script>
+        function retrieveConsoleData() {
+            let userName = localStorage.getItem('userName');
+            let title = localStorage.getItem('title');
+            let content = localStorage.getItem('content');
+        
+            const container = document.querySelector('.data-container')
+            container.innerHTML = `
+            <p>Username: ${userName}</p>
+            <p>Title: ${title}</p>
+            <p>Content: ${content}</p>
+            `;
+        }
+        window.onload = retrieveConsoleData;
+    </script>
+    <script>
+        document.getElementById('back-click').addEventListener('click', function() {
+            window.location.href='http://127.0.0.1:5500/index.html';
+        });
+    </script>
 </body>
+
 </html>
